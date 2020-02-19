@@ -1,0 +1,33 @@
+﻿@model System.Data.DataTable
+
+
+<div class="col-12">
+
+    @(Html.Kendo().Grid<dynamic>()
+        .Name(@ViewData["Name"].ToString())
+        .Columns(columns =>
+    {
+        foreach (System.Data.DataColumn column in Model.Columns)
+        {
+            columns.Bound(column.ColumnName);
+        }
+    })
+        .Pageable()
+        .Sortable()
+        .Filterable()
+        .Scrollable()
+        .DataSource(dataSource => dataSource
+        .Ajax()
+        .PageSize(50)
+        .Model(model =>
+            {
+                 foreach (System.Data.DataColumn column in Model.Columns)
+                    {
+                        var field = model.Field(column.ColumnName, column.DataType);
+
+                    }
+            })
+        .Read(read => read.Action(@ViewData["ActionName"].ToString(), "RunData"))
+    )
+    )
+</div>

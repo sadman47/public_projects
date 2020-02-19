@@ -1,0 +1,652 @@
+[
+  {
+    "Cell Name": "E: IMDM EXCL [E: IMDM EXCL]",
+    "Cell ID": 1915,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 8119289,
+    "Cell Code": "A006758157",
+    "Notes": "",
+    "Last Run Date": 43276.59852
+  },
+  {
+    "Cell Name": "CEC - IMDM EXCL [CEC - IMDM EXCL]",
+    "Cell ID": 1841,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 11431465,
+    "Cell Code": "A006758134",
+    "Notes": "cmpgn_unvrs in ('NW','ALL') and NW_ACCT_Uverse_mun = 'Y'\n\n\nAND excl_rsn_id NOT IN (32,51,60,53) -- Added per modified MUN",
+    "Last Run Date": 43276.59854
+  },
+  {
+    "Cell Name": "CEC: IMDM EXCL_1 [CEC: IMDM EXCL_1]",
+    "Cell ID": 1894,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 8023183,
+    "Cell Code": "A006758150",
+    "Notes": "(cmpgn_unvrs  in ('NW','ALL') \nand NW_ACCT_Telco_mun  = 'Y' )   \nAND excl_rsn_id NOT IN (32,60) -- Added per modified MUN\n\n\nOR \n\nexcl_rsn_id in (29,30,100002)  -- Removed per Modified MUN\n\n29 Bell South\n30 Special Billing\n100002 Multi Region",
+    "Last Run Date": 43276.59865
+  },
+  {
+    "Cell Name": "CIC - UVERS CUSTOMERS [CIC - UVERS CUSTOMERS]",
+    "Cell ID": 1838,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 13694743,
+    "Cell Code": "A006758133",
+    "Notes": "include UVerse customers and those are not \n\n(exclude connected communities, remove per APrimo A99513\n\nexclude executives with a DNC indicator)\n\nCLOC_DIM.uvrs_subsrptn_sts_cd = 'H'  AND\nCLOC_DIM.uvrs_discnt_dt = '1900-01-01' AND\nent_acct_sts_cd = 'A' AND\nbill_sys_geo_id = 24\nand\nCLOC_DIM.CC_HOLD_IND <> 'Y'\nand\nUVERSE_EXEC_DNC_IND <> 'Y'\n\nAnd (prd_cmbn_cd like ('%D%') or   /*  Added on 1/31/18  by tg4043 */\n         prd_cmbn_cd like ('%E%') or\n         prd_cmbn_cd like ('%F%') or\n         prd_cmbn_cd like ('%H%'))",
+    "Last Run Date": 43276.59866
+  },
+  {
+    "Cell Name": "KEEP: UserVariable Initialize_ [KEEP: UserVariable Initialize_]",
+    "Cell ID": 1826,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 1,
+    "Cell Code": "A006758131",
+    "Notes": "PLEASE DO NOT DELETE\n\nInitializes user variables for use in mail list templates for PM ATTUID, List Generation Date, and other dates needed for date calculations. \n\nLast modified: 20170103",
+    "Last Run Date": 43276.59869
+  },
+  {
+    "Cell Name": "W: DNS DNM [W: DNS DNM]",
+    "Cell ID": 197259,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 5448997,
+    "Cell Code": "A006758165",
+    "Notes": "W_SUB_DM_cleanse_without_DNM",
+    "Last Run Date": 43276.59873
+  },
+  {
+    "Cell Name": "NW: DNS DM [NW: DNS DM]",
+    "Cell ID": 197635,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 3895686,
+    "Cell Code": "A006758164",
+    "Notes": "NW_ACCT_DM_cleanse_without_DNM",
+    "Last Run Date": 43276.59873
+  },
+  {
+    "Cell Name": "CIC - ACTIVE ACCOUNT_1 [CIC - ACTIVE ACCOUNT_1]",
+    "Cell ID": 1888,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 4329339,
+    "Cell Code": "A006758148",
+    "Notes": "NEW LOGIC  --RC115E  04/05/2015\n\nNW_SUBSCRIBER_DIM_ACCOUNT.non_cpni_assumed_tdm_ind='Y' AND\nNW_SUBSCRIBER_DIM_ACCOUNT.main_ln_ind = 'Y' AND\nacct_id = anhr_acct_id AND\nbill_sys_geo_id IN (13, 25, 27, 29, 31)\nand fict_acct_nbr_ind <> 'Y'\n\nOLD LOGIC\n\n\n---CIC - ACTIVE ACCOUNT\n---CIC - PRIMARY SAAN\n---CIC - WTN NOT BTN\n\nsubsrptn_cnt > 0 AND\nent_acct_sts_cd = 'A' AND\nNW_SUBSCRIBER_DIM_ACCOUNT.main_ln_ind = 'Y' AND\nacct_id = anhr_acct_id AND\nbill_sys_geo_id IN (13, 25, 27, 29, 31)\nand fict_acct_nbr_ind <> 'Y'",
+    "Last Run Date": 43276.59875
+  },
+  {
+    "Cell Name": "DTV [DTV]",
+    "Cell ID": 1907,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 19308141,
+    "Cell Code": "A006758155",
+    "Notes": "DTV_Prd_Ln_ind = 'Y' And\nNW_ACCOUNT_BASE.ent_acct_sts_cd = 'A' AND\n(BLNG_ALOC.dtv_subsrptn_sts_cd in ( 'H','B') OR\nSRV_ALOC.dtv_subsrptn_sts_cd in ( 'H','B'))\nand (bill_sys_geo_id = 16 or\n       prd_cmbn_cd  LIKE '%G%')",
+    "Last Run Date": 43276.5988
+  },
+  {
+    "Cell Name": "CIC  - DRYLOOP_Accts [CIC  - DRYLOOP_Accts]",
+    "Cell ID": 1897,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 245091,
+    "Cell Code": "A006758151",
+    "Notes": "(\n(CLOC_DIM.brdbnd_subsrptn_sts_cd = 'H'\nOR CLOC_DIM.telco_dry_loop_ind = 'Y')\nAND CLOC_DIM.telco_subsrptn_sts_cd <> 'H'\nAND ent_acct_sts_cd = 'A' \nAND bill_sys_geo_id IN (13, 25, 27, 29, 31) )",
+    "Last Run Date": 43276.59885
+  },
+  {
+    "Cell Name": "CEC: Misc Acct Exclusions [CEC: Misc Acct Exclusions]",
+    "Cell ID": 1891,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 286807,
+    "Cell Code": "A006758149",
+    "Notes": "--CIC - ACTIVE ACCOUNT\n\n--CEC: SPORT Accts\n--CEC: TTY Accts\n--CEC: Denied Service\n\n--CEC: OCA and LCO\n(spec_blng_arng_ind = 'Y' and  bill_sys_geo_id = 31)\nOR \n(( sprt_acct_ind = 'Y'\nOR  tty_acct_ind = 'Y'\nOR sls_rstn_ind = 'Y'\nOR  trtmnt_ind ='Y'\n)\nand bill_sys_geo_id in (13,25,27,29,31)\n)\nOR  \n(bill_sys_geo_id = 13 and   locl_crdt_optn_ind = 'Y' )\nOR  (bill_sys_geo_id = 13 and   oca_ind = 'Y')",
+    "Last Run Date": 43276.5989
+  },
+  {
+    "Cell Name": "Excl Mandatory Dryloop [Excl Mandatory Dryloop]",
+    "Cell ID": 1900,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 7827649,
+    "Cell Code": "A006758152",
+    "Notes": "(cmpgn_unvrs  in ('NW','ALL')\nand NW_ACCT_Telco_Dryloop_mun   = 'Y'   ) \nOR excl_rsn_id in (29,30,100002,32,42,60) -- removed per modified MUN",
+    "Last Run Date": 43276.59891
+  },
+  {
+    "Cell Name": "CEC: IMDM EXCL: Mandatory [CEC: IMDM EXCL: Mandatory]",
+    "Cell ID": 1851,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 19573785,
+    "Cell Code": "A006758137",
+    "Notes": "W_SUB_cnsmr_pstpd_mun = 'Y'",
+    "Last Run Date": 43276.59903
+  },
+  {
+    "Cell Name": "CH: SUB - Non-Emailed Leads [CH: SUB - Non-Emailed Leads]",
+    "Cell ID": 198426,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 80286,
+    "Cell Code": "A006758927",
+    "Notes": "",
+    "Last Run Date": 43276.59904
+  },
+  {
+    "Cell Name": "CEC: Bad Alocs [CEC: Bad Alocs]",
+    "Cell ID": 241381,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 10927448,
+    "Cell Code": "A006758140",
+    "Notes": "4/26/16 - Add dynamic Bad Aloc exclusion.  tg4043",
+    "Last Run Date": 43276.59912
+  },
+  {
+    "Cell Name": "POSTPAID - SERVICE [POSTPAID - SERVICE]",
+    "Cell ID": 1857,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 26193719,
+    "Cell Code": "A006758139",
+    "Notes": "PREPAID_FLAG = 'N' \nAnd enterprise_status_code in ('A','S')\nAnd RESELLER_FLAG = 'N'\nAnd TRACFONE_FLAG = 'N'\nAnd COU_FLAG = 'N'\nAnd digl_life_ind = 'N'\nAnd CUSTOMER_GROUP NOT IN ('BMG', 'UNK')\nAnd cust_loc_id NOT IN (250223557, 235604894, 520229600)",
+    "Last Run Date": 43276.59918
+  },
+  {
+    "Cell Name": "Subscriber Table_1 [Subscriber Table_1]",
+    "Cell ID": 1881,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 120879603,
+    "Cell Code": "A006758145",
+    "Notes": "",
+    "Last Run Date": 43276.59922
+  },
+  {
+    "Cell Name": "LFLN Telco MUN [LFLN Telco MUN]",
+    "Cell ID": 1902,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 4065350,
+    "Cell Code": "A006758153",
+    "Notes": "Same as Telco MUN except it does not exclude Lifeline\n\n---UIV_OneAtt_Prod_v1_29.cat   2013-03-06\n\nCreated 9/22/11\nAPrimo 98014\n\nUIV Cat V1 \n2012-02-07",
+    "Last Run Date": 43276.59922
+  },
+  {
+    "Cell Name": "NW_ACCT_Emergency_Scrub [NW_ACCT_Emergency_Scrub]",
+    "Cell ID": 1835,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 0,
+    "Cell Code": "A006758132",
+    "Notes": "EG_CM_ACCT_MUN_Emergency_Scrub()",
+    "Last Run Date": 43276.59928
+  },
+  {
+    "Cell Name": "CEC: W_SUB_Emergency_Scrub_1 [CEC: W_SUB_Emergency_Scrub_1]",
+    "Cell ID": 1878,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 0,
+    "Cell Code": "A006758144",
+    "Notes": "Non-Optional:\n\n EG_CM_SUB_MUN_Emergency_Scrub()",
+    "Last Run Date": 43276.59929
+  },
+  {
+    "Cell Name": "CEC: IMDM EXCL SERVICE [CEC: IMDM EXCL SERVICE]",
+    "Cell ID": 1854,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 214139,
+    "Cell Code": "A006758138",
+    "Notes": "IMDM excl view for SERVICE campaigns\n\nid -11 Billing Name is Test\nid -16 Devices Ipads\nid -17 Devices Test\nid -18 TDMA\nid - 20 Wireless Home Numbers\nid - 21 MisMarked Resellers\nid - 28 Tablets\nid 118 - Apple Watches and Wearables - added on 12/5/17 tg4043",
+    "Last Run Date": 43276.59934
+  },
+  {
+    "Cell Name": "E: ALL [E: ALL]",
+    "Cell ID": 1917,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 8119289,
+    "Cell Code": "A006758158",
+    "Notes": "",
+    "Last Run Date": 43276.59935
+  },
+  {
+    "Cell Name": "CEC: Mandatory IMDM EXCL [CEC: Mandatory IMDM EXCL]",
+    "Cell ID": 1936,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 19573782,
+    "Cell Code": "A006758129",
+    "Notes": "cmpgn_unvrs in ('W','ALL') \nand W_SUB_BMG_IRU_mun = 'Y'\nand SRV_ACCS_ID is NOT NULL",
+    "Last Run Date": 43276.59936
+  },
+  {
+    "Cell Name": "MUN MERGE [MUN MERGE]",
+    "Cell ID": 1843,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 10516312,
+    "Cell Code": "A006758135",
+    "Notes": "catalog UIV V1\n\nupdated 2012-02-07",
+    "Last Run Date": 43276.59941
+  },
+  {
+    "Cell Name": "DRYLOOP MUN [DRYLOOP MUN]",
+    "Cell ID": 1904,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 232354,
+    "Cell Code": "A006758154",
+    "Notes": "---UIV_OneAtt_Prod_v1_29.cat   2013-03-06\n\ncatalog UIV V1\n\nupdated 2012-02-07",
+    "Last Run Date": 43276.59941
+  },
+  {
+    "Cell Name": "BMG SRV Special [BMG SRV Special]",
+    "Cell ID": 1944,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 50481219,
+    "Cell Code": "A006758130",
+    "Notes": "PREPAID_FLAG = 'N'\nAND enterprise_status_code in ( 'A','S')  /* Added back on 6/7/2016 - tg4043 */\nAND CUSTOMER_GROUP = 'BMG'\nAND LIABILITY IN ('IRU', 'UNK')   Added UNK  - added on 6/12/2015 tg4043\nAND RESELLER_FLAG = 'N'\nAND TRACFONE_FLAG = 'N'\n/*-- AND EMPLOYEE_FLAG ='N' removed on 20140124  A274814_W_Remove_Employee_Excl_from_Service_MUNs*/\nAND COU_FLAG = 'N'\nAND digl_life_ind = 'N'             /* No Digital Life subscribers */\nand cust_loc_id NOT IN (250223557 ,235604894 ,520229600)",
+    "Last Run Date": 43276.59941
+  },
+  {
+    "Cell Name": "I: Residential Only [I: Residential Only]",
+    "Cell ID": 1922,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 19210403,
+    "Cell Code": "A006758159",
+    "Notes": "Updated on 05/02/2018 by rc115e\n\n(bill_sys_geo_id = 16 And\nDTV_ACCT_SUB_TYPE_TITL in ('BLS','CSH','DAE','FAM','FRP','GME','HDL','JCD','JDU','LSE','MBL','MDD','MDU','MTL','MTS','PCO','PCR','PTR','QST','REG','RSH','SWB','TCD','TMU','TMW','VZN','X20'))\n\nOr\n\n(bill_sys_geo_id = 24 And\nacct_type_cd = 'R')\n\n**************************************************************************************************************************\nUpdated on 10/26/2017 by tg4043\n(bill_sys_geo_id = 16 And\nDTV_ACCT_SUB_TYPE_TITL in ('PTR','FRP','BLS','DAE','FAM','MTL','QST','SWB','VZN',\n'MDD','MDU','TMU','JDU','TCD','MTS','X20','JCD',\n'REG','CSH','MBL','LSE','HDL','RSH',\n'GME','PCO','PCR'))\n\nOr\n\n(bill_sys_geo_id = 24 And\nacct_type_cd = 'R')\n\n********************************************************************************************************************\n\nAdded on 12/8/16 by tg4043:\n\nNW_ACCOUNT_BASE.DTV_ACCT_SUB_TYPE_TITL in ('PTR','FRP','BLS','DAE','FAM','MTL','QST','SWB','VZN',\n'MDD','MDU','TMU','JDU','TCD','MTS','X20','JCD',\n'REG','CSH','MBL','LSE','HDL','RSH',\n'GME','PCO','PCR')",
+    "Last Run Date": 43276.59953
+  },
+  {
+    "Cell Name": "I: NO RESTRICTIONS [I: NO RESTRICTIONS]",
+    "Cell ID": 1912,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 19041246,
+    "Cell Code": "A006758156",
+    "Notes": "(BLNG_ALOC.DTV_MKTG_RSTRCTD_IND = 'N' OR\nSRV_ALOC.DTV_MKTG_RSTRCTD_IND = 'N')\n\nAND\n\n(BLNG_ALOC.DTV_DLR_RSTRCTD_IND = 'N' OR\nSRV_ALOC.DTV_DLR_RSTRCTD_IND = 'N')",
+    "Last Run Date": 43276.59963
+  },
+  {
+    "Cell Name": "CEC: White_Label_1 [SEG: ConnectedCars_WhiteBlue_1]",
+    "Cell ID": 1884,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 10185976,
+    "Cell Code": "A006758146",
+    "Notes": "5/10/16 tg4043 - White and Blue Connected Cars.  White - Non AT&T acounts and Blue - Wireless AT&T Accounts",
+    "Last Run Date": 43276.59966
+  },
+  {
+    "Cell Name": "CEC: Blue_Label_1 [SEG: ConnectedCars_WhiteBlue_1]",
+    "Cell ID": 1885,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 396350,
+    "Cell Code": "A006758147",
+    "Notes": "5/10/16 tg4043 - White and Blue Connected Cars.  White - Non AT&T acounts and Blue - Wireless AT&T Accounts",
+    "Last Run Date": 43276.59966
+  },
+  {
+    "Cell Name": "I: ALL [I: ALL]",
+    "Cell ID": 1909,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 18945621,
+    "Cell Code": "A006758171",
+    "Notes": "",
+    "Last Run Date": 43276.5998
+  },
+  {
+    "Cell Name": "CH: ACCT - Non-Emailed Leads [CH: ACCT - Non-Emailed Leads]",
+    "Cell ID": 198410,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 111056,
+    "Cell Code": "A006758926",
+    "Notes": "",
+    "Last Run Date": 43276.59984
+  },
+  {
+    "Cell Name": "CH: EM - Non-Emailed Leads [CH: EM - Non-Emailed Leads]",
+    "Cell ID": 198418,
+    "Audience": "email",
+    "Status": "Test Flowchart Run",
+    "Size": 111093,
+    "Cell Code": "A006758188",
+    "Notes": "",
+    "Last Run Date": 43276.59984
+  },
+  {
+    "Cell Name": "CEC: BMG ACCTS Special [CEC: BMG ACCTS Special]",
+    "Cell ID": 1941,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 115,
+    "Cell Code": "A006758161",
+    "Notes": "W_ACCOUNT.Enterprise_Status_Code = 'C'",
+    "Last Run Date": 43276.59985
+  },
+  {
+    "Cell Name": "Service Marketable Universe [Service Marketable Universe]",
+    "Cell ID": 1848,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 26036440,
+    "Cell Code": "A006758167",
+    "Notes": "updated \n2014/01/24 -- A274814_W_Remove_Employee_Excl_from_Service_MUNs and UIV_OneAtt_Prod_v2_9.cat\n2013/05/21 -- Add OK Storm Zips exclusion\n2012/12/06 -- UIV_OneAtt_Prod_v1_24.cat\nUIV catalog - V1_10 -- 2012-06-26",
+    "Last Run Date": 43276.59991
+  },
+  {
+    "Cell Name": "DTV MUN [DTV MUN]",
+    "Cell ID": 1919,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 18937120,
+    "Cell Code": "A006758172",
+    "Notes": "",
+    "Last Run Date": 43276.59991
+  },
+  {
+    "Cell Name": "CH: DM ACCT [CH: DM ACCT]",
+    "Cell ID": 198928,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 12179594,
+    "Cell Code": "A006758939",
+    "Notes": "",
+    "Last Run Date": 43276.59997
+  },
+  {
+    "Cell Name": "BMG IRU SERVICE MUN [BMG IRU SERVICE MUN]",
+    "Cell ID": 1938,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 40183998,
+    "Cell Code": "A006758174",
+    "Notes": "Special BMG IRU MUN for Service/Legal campaigns Only.\n\n\nupdated \n2015/06/12 -- ROR_A495113 - Modify the UNK exclusion from mandatory to optional \n2015/05/22 -- UIV_OneAtt_Prod_v2_40.cat\n2014/03/04 -- A287215  - Modify FAN suppression in BMG IRU MUNs \n                    -- Remove from Service BMG IRU MUN\n                    -- UIV_OneAtt_Prod_v2_12.cat\n2014/01/24 -- A274814_W_Remove_Employee_Excl_from_Service_MUNs\n                    -- UIV_OneAtt_Prod_v2_9.cat\n2013/05/21 -- OK Storm Zip Code Exclusion added\n2013/03/22 -- UIV_OneAtt_Prod_v1_30.cat\n2012/12/06 -- UIV_OneAtt_Prod_v1_24.cat\n2012-06-25 ----UIV_OneAtt_Prod_v1_10.cat\n---- new EXCL view",
+    "Last Run Date": 43276.60012
+  },
+  {
+    "Cell Name": "CH: EM - Emailed Leads [CH: EM - Emailed Leads]",
+    "Cell ID": 198697,
+    "Audience": "email",
+    "Status": "Test Flowchart Run",
+    "Size": 25098090,
+    "Cell Code": "A006758932",
+    "Notes": "",
+    "Last Run Date": 43276.60167
+  },
+  {
+    "Cell Name": "CH: SUB - Emailed Leads [CH: SUB - Emailed Leads]",
+    "Cell ID": 198715,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 13357026,
+    "Cell Code": "A006758934",
+    "Notes": "",
+    "Last Run Date": 43276.60171
+  },
+  {
+    "Cell Name": "CH: ACCT - Emailed Leads [CH: ACCT - Emailed Leads]",
+    "Cell ID": 198706,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 25014487,
+    "Cell Code": "A006758933",
+    "Notes": "",
+    "Last Run Date": 43276.60188
+  },
+  {
+    "Cell Name": "Non-Emailed SUB => ACCT [Non-Emailed SUB => ACCT]",
+    "Cell ID": 198460,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 80220,
+    "Cell Code": "A006758930",
+    "Notes": "",
+    "Last Run Date": 43276.60209
+  },
+  {
+    "Cell Name": "Non-Emailed EM => ACCT [Non-Emailed EM => ACCT]",
+    "Cell ID": 198455,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 144065,
+    "Cell Code": "A006758929",
+    "Notes": "",
+    "Last Run Date": 43276.60288
+  },
+  {
+    "Cell Name": "Non-Emailed EM => SUB_ACCT [Non-Emailed EM => SUB_ACCT]",
+    "Cell ID": 198452,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 102246,
+    "Cell Code": "A006758928",
+    "Notes": "",
+    "Last Run Date": 43276.60302
+  },
+  {
+    "Cell Name": "Non-Emailed [Non-Emailed]",
+    "Cell ID": 198473,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 144869,
+    "Cell Code": "A006758931",
+    "Notes": "",
+    "Last Run Date": 43276.6031
+  },
+  {
+    "Cell Name": "NW MUNs [NW MUNs]",
+    "Cell ID": 1925,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 33418450,
+    "Cell Code": "A006758173",
+    "Notes": "",
+    "Last Run Date": 43276.60484
+  },
+  {
+    "Cell Name": "W MUNs [W MUNs]",
+    "Cell ID": 1950,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 66142741,
+    "Cell Code": "A006758175",
+    "Notes": "",
+    "Last Run Date": 43276.6055
+  },
+  {
+    "Cell Name": "Emailed SUB => ACCT [Emailed SUB => ACCT]",
+    "Cell ID": 198736,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 13270209,
+    "Cell Code": "A006758937",
+    "Notes": "",
+    "Last Run Date": 43276.61115
+  },
+  {
+    "Cell Name": "Emailed EM => ACCT [Emailed EM => ACCT]",
+    "Cell ID": 198732,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 35673335,
+    "Cell Code": "A006758936",
+    "Notes": "",
+    "Last Run Date": 43276.61282
+  },
+  {
+    "Cell Name": "Emailed EM => SUB_ACCT [Emailed EM => SUB_ACCT]",
+    "Cell ID": 198724,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 18859250,
+    "Cell Code": "A006758935",
+    "Notes": "",
+    "Last Run Date": 43276.6134
+  },
+  {
+    "Cell Name": "Target Leads [Target Leads]",
+    "Cell ID": 236461,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 127200,
+    "Cell Code": "A006758938",
+    "Notes": "",
+    "Last Run Date": 43276.61884
+  },
+  {
+    "Cell Name": "NW: CH [NW: CH]",
+    "Cell ID": 198978,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 22438,
+    "Cell Code": "A006758924",
+    "Notes": "",
+    "Last Run Date": 43276.61914
+  },
+  {
+    "Cell Name": "NW: Staging [NW: Staging]",
+    "Cell ID": 1953,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 22438,
+    "Cell Code": "A006758176",
+    "Notes": "",
+    "Last Run Date": 43276.62021
+  },
+  {
+    "Cell Name": "Non-Emailed Subs [Non-Emailed Subs]",
+    "Cell ID": 198950,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 204811,
+    "Cell Code": "A006758941",
+    "Notes": "",
+    "Last Run Date": 43276.62057
+  },
+  {
+    "Cell Name": "W: CH [W: CH]",
+    "Cell ID": 198995,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 120978,
+    "Cell Code": "A006758925",
+    "Notes": "",
+    "Last Run Date": 43276.62095
+  },
+  {
+    "Cell Name": "W Staging [W Staging]",
+    "Cell ID": 1962,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 41968,
+    "Cell Code": "A006758177",
+    "Notes": "",
+    "Last Run Date": 43276.62274
+  },
+  {
+    "Cell Name": "ACCT [ACCT]",
+    "Cell ID": 276828,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 64406,
+    "Cell Code": "A006758179",
+    "Notes": "",
+    "Last Run Date": 43276.62284
+  },
+  {
+    "Cell Name": "DM Braille [Reseg]",
+    "Cell ID": 276127,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 0,
+    "Cell Code": "A000000001",
+    "Notes": "",
+    "Last Run Date": 43276.62296
+  },
+  {
+    "Cell Name": "DM Remaining leads [Reseg]",
+    "Cell ID": 276128,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 64406,
+    "Cell Code": "A000000002",
+    "Notes": "",
+    "Last Run Date": 43276.62296
+  },
+  {
+    "Cell Name": "QCQA Sample.Segment1_DM Braille [QCQA Sample]",
+    "Cell ID": 276131,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 0,
+    "Cell Code": "A006758182",
+    "Notes": "",
+    "Last Run Date": 43276.62309
+  },
+  {
+    "Cell Name": "QCQA Sample.Segment1_DM Remaining leads [QCQA Sample]",
+    "Cell ID": 276132,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 100,
+    "Cell Code": "A006758183",
+    "Notes": "",
+    "Last Run Date": 43276.62309
+  },
+  {
+    "Cell Name": "QCQA Merge [QCQA Merge]",
+    "Cell ID": 1970,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 100,
+    "Cell Code": "A006758184",
+    "Notes": "",
+    "Last Run Date": 43276.62314
+  },
+  {
+    "Cell Name": "QCQA Switch - W [QCQA Switch - W]",
+    "Cell ID": 282709,
+    "Audience": "srv_accs",
+    "Status": "Test Flowchart Run",
+    "Size": 0,
+    "Cell Code": "A006758186",
+    "Notes": "",
+    "Last Run Date": 43276.62321
+  },
+  {
+    "Cell Name": "NW QCQA [NW QCQA]",
+    "Cell ID": 282704,
+    "Audience": "acct",
+    "Status": "Test Flowchart Run",
+    "Size": 37,
+    "Cell Code": "A006759186",
+    "Notes": "",
+    "Last Run Date": 43276.62323
+  },
+  {
+    "Cell Name": "Cleanup [Cleanup]",
+    "Cell ID": 1979,
+    "Audience": "Customer",
+    "Status": "Test Flowchart Run",
+    "Size": 1,
+    "Cell Code": "A006758187",
+    "Notes": "",
+    "Last Run Date": 43276.6237
+  }
+]

@@ -1,0 +1,218 @@
+[
+  {
+    "Cell Code": "A000000001",
+    "Cell Name": "01_Consumer_Have_DTV_or_Uverse_TV_and_Wireless_Data_Overage",
+    "Target Count": 7,
+    "Control Count": 0,
+    "Total Count": 7,
+    "Target Prct": 0.0000478325,
+    "CG Prct": 0
+  },
+  {
+    "Cell Code": "A000000002",
+    "Cell Name": "02_Consumer_Have_DTV_or_Uverse_TV_and_Unlimited_Data",
+    "Target Count": 14290,
+    "Control Count": 5718,
+    "Total Count": 20008,
+    "Target Prct": 0.097646641,
+    "CG Prct": 0.285785686
+  },
+  {
+    "Cell Code": "A000000003",
+    "Cell Name": "03_Consumer_Have_DTV_or_Uverse_TV_and_No_Wireless_Data_Overage",
+    "Target Count": 2501,
+    "Control Count": 130,
+    "Total Count": 2631,
+    "Target Prct": 0.01708987,
+    "CG Prct": 0.04941087
+  },
+  {
+    "Cell Code": "A000000004",
+    "Cell Name": "04_Consumer_Have_DTV_or_Uverse_TV_and_Mobile_Share_Advantage",
+    "Target Count": 101,
+    "Control Count": 4,
+    "Total Count": 105,
+    "Target Prct": 0.000690155,
+    "CG Prct": 0.038095238
+  },
+  {
+    "Cell Code": "A000000005",
+    "Cell Name": "05_Consumer_Have_IPBB_and_Wireless_Data_Overage",
+    "Target Count": 3,
+    "Control Count": 0,
+    "Total Count": 3,
+    "Target Prct": 0.0000204996,
+    "CG Prct": 0
+  },
+  {
+    "Cell Code": "A000000006",
+    "Cell Name": "06_Consumer_Have_IPBB_and_Unlimited_Data",
+    "Target Count": 868,
+    "Control Count": 41,
+    "Total Count": 909,
+    "Target Prct": 0.005931231,
+    "CG Prct": 0.04510451
+  },
+  {
+    "Cell Code": "A000000007",
+    "Cell Name": "07_Consumer_Have_IPBB_and_Wireless_and_No_Wireless_Data_Overage",
+    "Target Count": 505,
+    "Control Count": 30,
+    "Total Count": 535,
+    "Target Prct": 0.003450774,
+    "CG Prct": 0.056074766
+  },
+  {
+    "Cell Code": "A000000008",
+    "Cell Name": "08_Consumer_Have_IPBB_and_Mobile_Share_Advantage",
+    "Target Count": 2062,
+    "Control Count": 101,
+    "Total Count": 2163,
+    "Target Prct": 0.014090089,
+    "CG Prct": 0.046694406
+  },
+  {
+    "Cell Code": "A000000009",
+    "Cell Name": "09_Consumer_Wireless_only_Subscribers_or_Wireless_DSL_and_Wireless_Data_Ovg",
+    "Target Count": 57,
+    "Control Count": 7,
+    "Total Count": 64,
+    "Target Prct": 0.000389493,
+    "CG Prct": 0.109375
+  },
+  {
+    "Cell Code": "A000000010",
+    "Cell Name": "10_Consumer_Wireless_only_Subscribers_or_Wireless_DSL_and_Unlimited",
+    "Target Count": 10988,
+    "Control Count": 5607,
+    "Total Count": 16595,
+    "Target Prct": 0.075083365,
+    "CG Prct": 0.337872853
+  },
+  {
+    "Cell Code": "A000000011",
+    "Cell Name": "11_Consumer_Wireless_only_Subscribers_or_Wireless_DSL_No_Wireless_Data_Ovg",
+    "Target Count": 4181,
+    "Control Count": 5006,
+    "Total Count": 9187,
+    "Target Prct": 0.028569671,
+    "CG Prct": 0.544900403
+  },
+  {
+    "Cell Code": "A000000012",
+    "Cell Name": "12_Consumer_Wireless_only_Subscribers_or_Wireless_DSL_and_Mobile_Share_Adv",
+    "Target Count": 31787,
+    "Control Count": 6695,
+    "Total Count": 38482,
+    "Target Prct": 0.217207402,
+    "CG Prct": 0.173977444
+  },
+  {
+    "Cell Code": "A000000013",
+    "Cell Name": "13_IRU_Have_DTV_or_Uverse_TV_and_Wireless_Data_Overage",
+    "Target Count": 17,
+    "Control Count": 1,
+    "Total Count": 18,
+    "Target Prct": 0.000116165,
+    "CG Prct": 0.055555556
+  },
+  {
+    "Cell Code": "A000000014",
+    "Cell Name": "14_IRU_Have_DTV_or_Uverse_TV_and_Unlimited_Data",
+    "Target Count": 18938,
+    "Control Count": 5923,
+    "Total Count": 24861,
+    "Target Prct": 0.129407424,
+    "CG Prct": 0.23824464
+  },
+  {
+    "Cell Code": "A000000015",
+    "Cell Name": "15_IRU_Have_DTV_or_Uverse_TV_and_No_Wireless_Data_Overage",
+    "Target Count": 2330,
+    "Control Count": 2632,
+    "Total Count": 4962,
+    "Target Prct": 0.015921391,
+    "CG Prct": 0.530431278
+  },
+  {
+    "Cell Code": "A000000016",
+    "Cell Name": "16_IRU_Have_DTV_or_Uverse_TV_and_Mobile_Share_Advantage",
+    "Target Count": 77,
+    "Control Count": 5,
+    "Total Count": 82,
+    "Target Prct": 0.000526158,
+    "CG Prct": 0.06097561
+  },
+  {
+    "Cell Code": "A000000017",
+    "Cell Name": "17_IRU_Have_IPBB_and_Wireless_Data_Overage",
+    "Target Count": 2,
+    "Control Count": 1,
+    "Total Count": 3,
+    "Target Prct": 0.0000136664,
+    "CG Prct": 0.333333333
+  },
+  {
+    "Cell Code": "A000000018",
+    "Cell Name": "18_IRU_Have_IPBB_and_Unlimited_Data",
+    "Target Count": 742,
+    "Control Count": 49,
+    "Total Count": 791,
+    "Target Prct": 0.005070245,
+    "CG Prct": 0.061946903
+  },
+  {
+    "Cell Code": "A000000019",
+    "Cell Name": "19_IRU_Have_IPBB_and_Wireless_and_No_Wireless_Data_Overage",
+    "Target Count": 774,
+    "Control Count": 30,
+    "Total Count": 804,
+    "Target Prct": 0.005288908,
+    "CG Prct": 0.037313433
+  },
+  {
+    "Cell Code": "A000000020",
+    "Cell Name": "20_IRU_Have_IPBB_and_Mobile_Share_Advantage",
+    "Target Count": 1956,
+    "Control Count": 114,
+    "Total Count": 2070,
+    "Target Prct": 0.013365768,
+    "CG Prct": 0.055072464
+  },
+  {
+    "Cell Code": "A000000021",
+    "Cell Name": "21_IRU_Wireless_only_Subscribers_or_Wireless_DSL_and_Wireless_Data_Ovg",
+    "Target Count": 95,
+    "Control Count": 6,
+    "Total Count": 101,
+    "Target Prct": 0.000649155,
+    "CG Prct": 0.059405941
+  },
+  {
+    "Cell Code": "A000000022",
+    "Cell Name": "22_IRU_Wireless_only_Subscribers_or_Wireless_DSL_and_Unlimited",
+    "Target Count": 11347,
+    "Control Count": 5614,
+    "Total Count": 16961,
+    "Target Prct": 0.077536489,
+    "CG Prct": 0.330994635
+  },
+  {
+    "Cell Code": "A000000023",
+    "Cell Name": "23_IRU_Wireless_only_Subscribers_or_Wireless_DSL_No_Wireless_Data_Ovg",
+    "Target Count": 7790,
+    "Control Count": 8796,
+    "Total Count": 16586,
+    "Target Prct": 0.053230744,
+    "CG Prct": 0.530326782
+  },
+  {
+    "Cell Code": "A000000024",
+    "Cell Name": "24_IRU_Wireless_only_Subscribers_or_Wireless_DSL_and_have_MS_Adv",
+    "Target Count": 34926,
+    "Control Count": 6869,
+    "Total Count": 41795,
+    "Target Prct": 0.238656863,
+    "CG Prct": 0.164349803
+  }
+]

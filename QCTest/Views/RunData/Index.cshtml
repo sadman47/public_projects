@@ -1,0 +1,34 @@
+﻿@model List<System.Data.DataTable>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    @{Html.RenderPartial("Grid1", Model[0], new ViewDataDictionary { { "ActionName", "ReadTargetCell" }, { "Name", "Grid1" } });}
+</div>
+<br />
+<br />
+<div>
+    @{Html.RenderPartial("Grid1", Model[3], new ViewDataDictionary { { "ActionName", "ReadTestData" }, { "Name", "Grid4" } });}
+
+</div>
+
+<br />
+<br />
+<div>
+    @{Html.RenderPartial("Grid1", Model[1], new ViewDataDictionary { { "ActionName", "ReadFileGenerated" }, { "Name", "Grid2" } });}
+</div>
+<br />
+<br />
+<div>
+    @{Html.RenderPartial("Grid1", Model[2], new ViewDataDictionary { { "ActionName", "ReadCellReport" }, { "Name", "Grid3" } });}
+
+</div>
+
+
+

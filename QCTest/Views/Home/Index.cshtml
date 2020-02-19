@@ -1,0 +1,77 @@
+﻿@model IEnumerable<QCDataLib.Models.CampaignRun>
+
+@{
+    ViewBag.Title = "Development Summary Page";
+}
+
+<div class="placeholders">
+</div>
+<div class="row">
+    <div class="col-12">
+        @(Html.Kendo().Grid(Model)
+                                            .Name("CampaignGrid")
+                                            .Columns(columns =>
+                                            {
+                                                columns.Bound(p => p.CampaignCode).Title("Campaign Code");
+                                                columns.Bound(p => p.CampaignName).Title("Campaign Name");
+                                                columns.Bound(p => p.AprimoID).Title("Aprimo ID");
+                                                columns.Bound(p => p.ListManager).Title("List Manager").Filterable(ftb => ftb.Multi(true).CheckAll(true));
+                                                columns.Bound(p => p.ProgramManager).Title("Program Manager").Filterable(ftb => ftb.Multi(true).CheckAll(true));
+                                                columns.Bound(p => p.FlowChartName).Title("Flowchart Name");
+                                                columns.Bound(p => p.LastExecutionId).Title("Last Execution ID");
+                                                columns.Bound(p => p.LastExecutionDateTime).Title("Last Execution Date/Time");
+                                                columns.Bound(p => p.ExecutedBy).Title("Executed by");
+                                                columns.Bound(p => p.LastRunApprovalStatus).Title("Last Run Approval Status");
+                                                columns.Bound(p => p.LastRunApprovalStatus).Title("Last Run Approval Date");
+                                                columns.Bound(p => p.LastRunQCStatus).Title("Last Run QC Status");
+                                                columns.Bound(p => p.NumberofFiles).Title("Number of files");
+                                            })
+                                            .Pageable()
+                                            .Sortable()
+                                            .Scrollable(scr => scr.Height(430))
+                                            .Filterable()
+                                            .ClientDetailTemplateId("template")
+                                            .DataSource(dataSource => dataSource
+                                                .Ajax()
+                                                .PageSize(20)
+                                                .ServerOperation(false)
+                                             )
+        )
+    </div>
+
+    <script id="template" type="text/kendo-tmpl">
+        @(Html.Kendo().Grid<QCDataLib.Models.CampaignRunDetail>()
+              .Name("grid_#=CampaignCode#")
+              .Columns(columns =>
+              {
+                  columns.Bound(o => o.ExecutionID);
+                  columns.Bound(o => o.ExecutionID).ClientTemplate("<a href='" + Url.Action("Index", "RunData") + "' > test</a>");
+                    columns.Bound(o => o.ListManager);
+                    columns.Bound(o => o.ProgramManager);
+                    columns.Bound(o => o.FlowchartName);
+                    columns.Bound(o => o.StartDateTime);
+                    columns.Bound(o => o.EndDateTime);
+                    columns.Bound(o => o.RunLength);
+                    columns.Bound(o => o.Executedby);
+                    columns.Bound(o => o.ApprovalStatus);
+                    columns.Bound(o => o.ApprovalButton);
+                    columns.Bound(o => o.ApprovalDate);
+                    columns.Bound(o => o.StatusUpdatedBy);
+                    columns.Bound(o => o.RunQCStatus);
+                    columns.Bound(o => o.NumberOfFiles);
+                    })
+                    .DataSource(dataSource => dataSource
+                    .Ajax()
+                    .PageSize(10)
+                    .Read(read => read.Action("getCampaignRunDetails", "Home", new { CampaignCode = "#=CampaignCode#" }))
+                    )
+                    .Sortable()
+                    .ToClientTemplate()
+        )
+    </script>
+    <script>
+        function dataBound() {
+            this.expandRow(this.tbody.find("tr.k-master-row").first());
+        }
+    </script>);
+</div>

@@ -1,0 +1,44 @@
+[
+  {
+    "Channel": "T_MALERT",
+    "VendorID": 166,
+    "FileName": "A668214_ASV_166_SMSnWAP_4_20191025.txt",
+    "FileCreationDateTime": "10/25/2019 12:30pm",
+    "TotalRowCount": "10,749 (10,748 Data Rows + 1 Header Row)",
+    "TriggerValuesCheck": "Passed",
+    "VendorLayoutCheck": "Passed",
+    "FileNameCheck": "Passed",
+    "Numberofduplicates": 4,
+    "Numberofcellcodes": 190,
+    "VendorsFileSample": "File Sample 166",
+    "QCSample": "QC Sample 166"
+  },
+  {
+    "Channel": "EM",
+    "VendorID": 140,
+    "FileName": "A668214_AMS_140_MMS_14_20191025.txt",
+    "FileCreationDateTime": "10/25/2019 12:40pm",
+    "TotalRowCount": "10,749 (10,748 Data Rows + 1 Header Row)",
+    "TriggerValuesCheck": "Passed",
+    "VendorLayoutCheck": "Error (XXX)",
+    "FileNameCheck": "Passed",
+    "Numberofduplicates": 0,
+    "Numberofcellcodes": 230,
+    "VendorsFileSample": "File Sample 140",
+    "QCSample": "QC Sample 140"
+  },
+  {
+    "Channel": "MMS",
+    "VendorID": 110,
+    "FileName": "A668214_CEM_110_EM_21_20191025.txt",
+    "FileCreationDateTime": "10/25/2019 1:00pm",
+    "TotalRowCount": "2,015 (2,015 Data Rows)",
+    "TriggerValuesCheck": "Error (XXX)",
+    "VendorLayoutCheck": "Passed",
+    "FileNameCheck": "Error (XXX)",
+    "Numberofduplicates": 2,
+    "Numberofcellcodes": 185,
+    "VendorsFileSample": "File Sample 110",
+    "QCSample": "QC Sample 110"
+  }
+]

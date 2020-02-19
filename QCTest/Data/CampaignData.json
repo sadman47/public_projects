@@ -1,0 +1,62 @@
+[
+  {
+    "CampaignCode": "C000000001",
+    "CampaignName": "DEV_Campaign Name 1_A10605",
+    "AprimoID": "10605",
+    "ListManager": "LM1",
+    "ProgramManager": "PM1",
+    "FlowChartName": "Current_CC_A10605",
+    "LastExecutionId": "C000000001_2019-10-25_11:00:00 AM",
+    "LastExecutionDateTime": "10/25/2019  11:00:00 AM",
+    "ExecutedBy": "Exe_1",
+    "LastRunApprovalStatus": null,
+    "LastRunApprovalDate": null,
+    "LastRunQCStatus": "Run Failed",
+    "NumberofFiles": null
+  },
+  {
+    "CampaignCode": "C000000002",
+    "CampaignName": "DEV_Campaign Name 2_A10700",
+    "AprimoID": "10715",
+    "ListManager": "LM2",
+    "ProgramManager": "PM1",
+    "FlowChartName": "Current_CC_A10700",
+    "LastExecutionId": "C000000001_2019-10-25_11:00:00 AM",
+    "LastExecutionDateTime": "10/25/2019  11:00:00 AM",
+    "ExecutedBy": "Exe_2",
+    "LastRunApprovalStatus": null,
+    "LastRunApprovalDate": null,
+    "LastRunQCStatus": "Warning",
+    "NumberofFiles": null
+  },
+  {
+    "CampaignCode": "C000000003",
+    "CampaignName": "Campaign Name 3",
+    "AprimoID": "10852",
+    "ListManager": "LM3",
+    "ProgramManager": "PM2",
+    "FlowChartName": "Current_CC_A10800",
+    "LastExecutionId": "C000000001_2019-10-25_11:00:00 AM",
+    "LastExecutionDateTime": "10/25/2019  11:00:00 AM",
+    "ExecutedBy": "Exe_3",
+    "LastRunApprovalStatus": null,
+    "LastRunApprovalDate": null,
+    "LastRunQCStatus": "Warning",
+    "NumberofFiles": null
+  },
+  {
+    "CampaignCode": "C000000004",
+    "CampaignName": "Campaign Name 4",
+    "AprimoID": "10865",
+    "ListManager": "LM4",
+    "ProgramManager": "PM3",
+    "FlowChartName": "Current_CC_A11800",
+    "LastExecutionId": "C000000001_2019-10-25_11:00:00 AM",
+    "LastExecutionDateTime": "10/25/2019  11:00:00 AM",
+    "ExecutedBy": "Exe_4",
+    "LastRunApprovalStatus": null,
+    "LastRunApprovalDate": null,
+    "LastRunQCStatus": "Run Succeeded",
+    "NumberofFiles": null
+  }
+]
